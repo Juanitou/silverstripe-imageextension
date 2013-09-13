@@ -44,7 +44,7 @@ class MyImageExtension extends DataExtension {
 		$cacheFile = $this->owner->cacheFilename("TopCroppedImage", $width, $height);
 		// You have to work with the absolute file path, at least in WAMP
 		$gd = new ExtendedGD(Director::getAbsFile($this->owner->Filename));
-		if ($gd->hasGD()) {
+		if ($gd->hasImageResource()) {
 			$gd = $gd->topCroppedImage($width, $height);
 			if ($gd) {
 				$gd->writeTo(Director::getAbsFile($cacheFile));
@@ -74,7 +74,7 @@ class MyImageExtension extends DataExtension {
 		$cacheFile = $this->owner->cacheFilename("MirroredImage", $width, $height);
 		// You have to work with the absolute file path, at least in WAMP
 		$gd = new ExtendedGD(Director::getAbsFile($this->owner->Filename));
-		if ($gd->hasGD()) {
+		if ($gd->hasImageResource()) {
 			$gd = $gd->mirroredImage($width, $height);
 			if ($gd) {
 				$gd->writeTo(Director::getAbsFile($cacheFile));
