@@ -1,0 +1,26 @@
+{
+    "name": "juanitou/silverstripe-imageextension",
+    "type": "silverstripe-vendormodule",
+    "description": "Extends Image objects to provide custom functions ",
+    "keywords": ["silverstripe", "image"],
+    "homepage": "https://github.com/Juanitou/silverstripe-imageextension",
+    "license": "BSD-2",
+    "authors": [
+        {
+            "name": "Juan Ramón Molina Menor",
+            "email": "info@juanmolina.eu",
+            "homepage": "https://github.com/Juanitou",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Juanitou\\ImageExtension\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}
