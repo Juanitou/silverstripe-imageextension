@@ -1,2 +1,3 @@
 fr:
-  CROPPING: 'Méthode de recadrage'
+  Juanitou\ImageExtension:
+    CROPPING: 'Méthode de recadrage'
