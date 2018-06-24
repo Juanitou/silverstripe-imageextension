@@ -1,3 +1,6 @@
 SilverStripe\Assets\Image:
   extensions:
     - Juanitou\ImageExtension\ImageExtension
+SilverStripe\AssetAdmin\Forms\FileFormFactory:
+  extensions:
+    - Juanitou\ImageExtension\FormFactoryExtension

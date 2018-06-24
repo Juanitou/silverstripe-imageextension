@@ -12,29 +12,21 @@
 namespace Juanitou\ImageExtension;
 
 use SilverStripe\Assets\Image;
-use SilverStripe\Core\Extension;
-use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\TextField;
+use SilverStripe\ORM\DataExtension;
 
-class ImageExtension extends Extension
+class ImageExtension extends DataExtension
 {
     /**
      * Add a cropping effect switch
      *
-     * TODO: Translate Enum values
+     * TODO: Translate Enum values?
+     * @see https://github.com/silverstripe/silverstripe-cms/issues/1683
      * @see http://www.balbus.tk/internationalize#TranslateEnumDropdown
+     * TODO: Add BottomCropped method
      */
     private static $db = [
-        'Cropping' => "Enum('Cropped, TopCropped, TODO:BottomCropped', 'Cropped'))"
+        'Cropping' => "Enum('Fill, Fit, Pad, TopCropped, TODO:BottomCropped', 'Fill'))"
     ];
-
-    public function updateCMSFields(FieldList $fields) {
-        $fields->addFieldToTab('Root.Main', new DropdownField(
-            'Cropping',
-            _t('CROPPING', 'Cropping method'),
-            singleton('Image')->dbObject('Cropping')->enumValues())
-        );
-    }
 
     /**
      * Get or generate a top-cropped copy of the image
