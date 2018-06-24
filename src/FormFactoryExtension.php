@@ -23,7 +23,7 @@ class FormFactoryExtension extends Extension
             'Name',
              DropdownField::create(
                 'Cropping',
-                _t('Juanitou\ImageExtension.CROPPING', 'Cropping method'),
+                _t('Juanitou\ImageExtension.CROPPING', '[TODO] Cropping method'),
                 Image::singleton()->dbObject('Cropping')->enumValues()
             )
         );
